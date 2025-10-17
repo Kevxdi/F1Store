@@ -1,0 +1,52 @@
+/* soporta tanto .productos como la interpolación .#{$nombre-seccion} */
+.#{$nombre-seccion}, .productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  align-items: start;
+}
+
+.producto {
+  background: #fff;
+  color: #0a0a0a;
+  border-radius: 8px;
+  padding: 0.8rem 0.8rem 1.6rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.55);
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* rotaciones "polaroid" */
+.producto:nth-child(3n + 1) { transform: rotate(-2deg); }
+.producto:nth-child(3n + 2) { transform: rotate(1.5deg); }
+.producto:nth-child(3n + 3) { transform: rotate(-1deg); }
+
+.producto:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 18px 35px rgba(0,0,0,0.65); }
+
+.producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  border: 12px solid #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.45);
+}
+
+.producto .info {
+  padding-top: 0.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.producto .info h2 { color: $color-principal; margin: 0.25rem 0 0.35rem; font-size: 1.05rem; }
+.producto .info p  { color: $color-secundario; font-size: 0.88rem; margin: 0 0 0.6rem; }
+.producto .info span{ display:inline-block; background:$color-principal; color:$color-texto; padding:0.45rem 0.9rem; border-radius:20px; font-weight:700; box-shadow:0 3px 8px rgba(217,4,41,0.18); }
