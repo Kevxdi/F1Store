@@ -8,13 +8,13 @@
 
 .filter {
   background: #fff;
-  color: $color-fondo;
+  color: $color-secundario;
   border: none;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
   cursor: pointer;
   font-weight: 700;
-  box-shadow: 0 3px 8px rgba(155, 73, 73, 0.459);
+  box-shadow: 0 3px 8px rgba(201, 3, 3, 0.459);
   transition: transform .12s ease, box-shadow .12s ease;
 }
 
@@ -23,7 +23,7 @@
 .filter.active {
   background: $color-principal;
   color: $color-texto;
-  box-shadow: 0 6px 18px rgba(255, 0, 43, 0.678);
+  box-shadow: 0 6px 18px rgb(255, 0, 43);
 }
 
 /* ocultar productos al filtrar */
