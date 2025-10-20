@@ -1,9 +1,3 @@
-/* Error: Undefined variable.
- *   ,
- * 1 | /* soporta tanto .productos como la interpolación .#{$nombre-seccion} *∕
- *   |                                                      ^^^^^^^^^^^^^^^
- *   '
- *   scss\productos.scss 1:54  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
