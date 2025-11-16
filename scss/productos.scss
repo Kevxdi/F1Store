@@ -1,4 +1,5 @@
-/* soporta tanto .productos como la interpolación .#{$nombre-seccion} */
+@import 'variables';
+
 .#{$nombre-seccion}, .productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
