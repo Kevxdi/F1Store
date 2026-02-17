@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <h1>Tienda Oficial Formula 1</h1>
+      <p>
+        Sets LEGO exclusivos de F1, merchandising oficial y coleccionables de tus equipos favoritos.
+        Red Bull, Ferrari, Mercedes, McLaren y más.
+      </p>
+    </div>
+  </header>
+
+
+
+
+  <!-- filtros -->
+  <div class="filters">
+    <button class="filter active" data-filter="all">Todos</button>
+    <button class="filter" data-filter="ropa">Ropa</button>
+    <button class="filter" data-filter="lego">LEGO</button>
+    <button class="filter" data-filter="merch">Merchandising</button>
+  </div>
+
+  <!-- Sección de productos -->
+  <section class="productos"></section>
+
+  <!-- Botones de secciones -->
+  <div class="btn-secciones">
+    <button class="btn-seccion active" data-seccion="agregar">➕ Agregar Producto</button>
+    <button class="btn-seccion" data-seccion="comentarios">💬 Comentarios</button>
+  </div>
+
+  <!-- Sección para agregar productos -->
+  <section class="agregar-producto" id="seccion-agregar" style="display: none;">
+    <div class="container">
+      <h2>Agregar Nuevo Producto</h2>
+      <form id="formProducto">
+        <div class="form-group">
+          <label for="nombre">Nombre del Producto:</label>
+          <input type="text" id="nombre" placeholder="Ej: Camiseta Red Bull" required>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción:</label>
+          <input type="text" id="descripcion" placeholder="Ej: Diseño oficial 2025" required>
+        </div>
+
+        <div class="form-group">
+          <label for="precio">Precio:</label>
+          <input type="text" id="precio" placeholder="Ej: $150.000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoría:</label>
+          <select id="categoria" required>
+            <option value="">Selecciona una categoría</option>
+            <option value="ropa">Ropa</option>
+            <option value="lego">LEGO</option>
+            <option value="merch">Merchandising</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="imagen">URL de la Imagen:</label>
+          <input type="url" id="imagen" placeholder="https://ejemplo.com/imagen.jpg" required>
+        </div>
+
+        <button type="submit" class="btn-agregar">Agregar Producto</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sección de comentarios -->
+  <section class="comentarios" id="seccion-comentarios" style="display: none;">
+    <div class="container">
+      <h2>Comentarios de Clientes</h2>
+      
+      <form id="formComentario" class="form-comentario">
+        <input type="text" id="nombreComentario" placeholder="Tu nombre" required>
+        <textarea id="textoComentario" placeholder="Deja tu comentario aquí..." required></textarea>
+        <button type="submit" class="btn-comentar">Publicar Comentario</button>
+      </form>
+
+      <div id="listaComentarios" class="lista-comentarios"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-title">F1 STORE</h3>
+          <p class="footer-text">Productos oficiales de Fórmula 1 y sets LEGO exclusivos</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Comprar</h4>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">LEGO F1</a></li>
+            <li><a href="#" class="footer-link">Ropa</a></li>
+            <li><a href="#" class="footer-link">Merchandising</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Ayuda</h4>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Envíos</a></li>
+            <li><a href="#" class="footer-link">Devoluciones</a></li>
+            <li><a href="#" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contacto</h4>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Soporte</a></li>
+            <li><a href="#" class="footer-link">Sobre Nosotros</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 F1 Store. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CORE -->
+  <script src="js/core/storage.js"></script>
+
+  <!-- PRODUCTOS -->
+  <script src="js/productos/productData.js"></script>
+  <script src="js/productos/productManager.js"></script>
+  <script src="js/productos/productUI.js"></script>
+  <script src="js/productos/filterUI.js"></script>
+
+  <!-- COMENTARIOS -->
+  <script src="js/comentarios/commentData.js"></script>
+  <script src="js/comentarios/commentManager.js"></script>
+  <script src="js/comentarios/commentUI.js"></script>
+
+  <!-- UI GENERAL -->
+  <script src="js/ui/sectionUI.js"></script>
+  <script src="js/ui/formHandler.js"></script>
+
+  <!-- INICIALIZADOR PRINCIPAL -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
